@@ -1,0 +1,1194 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.home-container{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(43, 48, 49, 0.3), rgba(66, 69, 69, 0.3));
+  position: relative;
+  padding: 0 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-body{
+  text-align: center;
+}
+
+.home-body h1 {
+  font-size: 130px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.home-body h1:hover {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
+
+.home-body a {
+  margin-left: 20px;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-size: 24px;
+  border: 2px solid white;
+  padding: 14px 50px;
+  margin-top: 20px;
+  transition: 0.5s;
+  margin-right: 20px;
+}
+
+.home-body a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2); /* Glass background */
+  backdrop-filter: blur(6px); /* Glass effect */
+  border-radius: 10px;
+  box-shadow: 2px 5px 7px 5px rgba(210, 209, 209, 0.7);
+}
+
+.navbar-logo {
+  color: black;
+
+  font-size: 24px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  background-color:rgb(68, 150, 68);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links {
+    margin-top: 20px;
+  }
+}
+
+/* signup */
+.signup-body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, rgba(175, 179, 186, 0.463), rgba(136, 145, 160, 0.54)), 
+              url('./images/img4.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-container {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  text-align: left;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.signup-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.signup-form-group {
+  margin-bottom: 15px;
+}
+
+.signup-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.signup-form-group input[type="text"],
+.signup-form-group input[type="email"],
+.signup-form-group input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.signupbt {
+  background: #138c41;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.signupbt:hover {
+  background: #1c5a34;
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .signup-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .signup-form-group label {
+    font-size: 1rem;
+  }
+
+  .signup-form-group input[type="text"],
+  .signup-form-group input[type="email"],
+  .signup-form-group input[type="password"] {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .signupbt {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* login */
+
+.login-body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, rgba(175, 179, 186, 0.463), rgba(136, 145, 160, 0.54)), 
+  url('./images/img4.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  text-align: left;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.login-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.login-form-group {
+  margin-bottom: 15px;
+}
+
+.login-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.login-form-group input[type="text"],
+.login-form-group input[type="email"],
+.login-form-group input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.loginbt {
+  background: #138c41;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.loginbt:hover {
+  background: #1c5a34;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .login-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .login-form-group label {
+    font-size: 1rem;
+  }
+
+  .login-form-group input[type="text"],
+  .login-form-group input[type="email"],
+  .login-form-group input[type="password"] {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .loginbt {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* post */
+.post_container{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9); /* Transparent white background */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+}
+.post-h1{
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+.post-form{
+  display: flex;
+  flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff; /* Light background color for form */
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 2px 8px 8px 8px rgba(0, 0, 0, 0.1);
+    
+    width: 40%;
+    justify-content: center; /* Center the form items */
+    /* position: sticky; Make the form sticky */
+    /* top: 100;
+    z-index: 10; */
+}
+.post-top-div{
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensure the div takes full width */
+  align-items: center;
+}
+.pro, .det, .pri {
+  margin-bottom: 20px;
+}
+.post-label{
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: #555;
+}
+.post-inputs{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+/* index.css */
+/* Add appropriate styling for .details and .price */
+.post-inputs.details {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.post-inputs.price::-webkit-outer-spin-button,
+.post-inputs.price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.post-bt{
+  background-color: #109041;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+/* Adjust button hover effect */
+.post-bt:hover {
+  background-color: #0d7635;
+  transition: background-color 0.3s ease;
+}
+.post-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center;
+  padding: 20px;
+  /* justify-content: center; Center the images container */
+}
+
+.post-image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 2px 4px 4px 4px rgba(0, 0, 0, 0.1);
+  max-width: 215px; /* Ensure images don't take too much width */
+  margin-top: 60px; /* Ensure images don't overlap the sticky form */
+  transition: box-shadow 0.3s ease;
+
+
+}
+.post-image-item:hover {
+  box-shadow: 4px 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-image-item img {
+  max-width: 100%;
+  height:150px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.post-image-item p {
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Explore page */
+.explore-container {
+  padding: 20px;
+}
+
+.explore-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.explore-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center; /* Center the images container */
+  padding: 20px;
+}
+
+.explore-image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  max-width: 215px;
+  box-shadow: 2px 4px 4px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.explore-image-item:hover {
+  box-shadow: 4px 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.explore-image-item img {
+  max-width: 100%;
+  height:150px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.explore-image-item p {
+  margin: 10px 0;
+  text-align: center;
+}
+/* Add to Cart button styles *//* Add to Cart button styles */
+.add-to-cart-icon {
+  margin-top: 20px;
+  background-color: #fff;
+  color: black;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.add-to-cart-bt{
+  background-color: #278440;
+  color: white;
+  height: 30px;
+  padding :5px 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border:none;
+}
+
+.add-to-cart-icon:hover {
+  background-color: #2b913a;
+  border-radius: 20px;
+}
+
+.add-to-cart-icon i {
+  font-size: 20px;
+}
+
+/* Chat icon styles */
+.chat-icon {
+  background-color: #fff;
+  color: #007bff;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.chat-icon:hover {
+  background-color: #fff;
+}
+
+.chat-icon i {
+  font-size: 20px;
+}
+
+/* Modal styles */
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+/* index.css */
+
+/* Style for the edit and delete icons */
+.edit-icon, .delete-icon {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  cursor:pointer;
+}
+
+
+.edit-icon:hover, .delete-icon :hover {
+  transform: scale(1.2);
+  color: rgb(54, 117, 81);
+}
+
+.edit-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+.modal-content img {
+  max-width: 100%;
+  border-radius: 4px;
+  height:180px;
+}
+
+.modal-content p {
+  margin: 10px 0;
+}
+
+.modal-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #3a8646;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #145c1f;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* userprofile */
+
+.user-profile-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ensure it takes the full height of the viewport */
+  background: linear-gradient(135deg, rgba(175, 179, 186, 0.463), rgba(136, 145, 160, 0.54)), 
+              url('./images/img4.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-profile-container {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 80px 50px;
+  width: 100%;
+  max-width: 430px;
+  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.user-profile-container h1 {
+  text-align: center;
+  color: #333;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.user-profile-container label {
+  font-weight: bold;
+  color: #555;
+}
+
+.user-profile-container input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 70%;
+}
+
+.user-profile-container button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #28a745;
+}
+
+.save-button {
+  background-color: #28a745;
+}
+
+ 
+/*cart page */
+.cart-container {
+  padding: 20px;
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cart-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center; /* Center the images container */
+  padding: 20px;
+  
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  max-width: 215px;
+  box-shadow: 2px 4px 4px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cart-item:hover {
+  box-shadow: 4px 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  max-width: 100%;
+  height:150px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.cart-item p {
+  margin: 10px 0;
+}
+
+.cart-delete-icon {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  cursor:pointer;
+}
+.cart-delete-icon:hover{
+  transform: scale(1.2);
+  color: rgb(54, 117, 81);
+}
+
+.pay-now-icon{
+  background-color: #278440;
+  color: white;
+  height: 30px;
+  padding :5px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border:none;
+  
+}
+
+.modal-content .payment-options,
+.modal-content .quantity-input {
+  margin: 20px 0;
+}
+
+
+
+@media (max-width: 768px) {
+  .cart-items-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .cart-item {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cart-item {
+    padding: 10px;
+  }
+}
+
+/* message */
+/* Add this to your CSS file */
+
+/* Chatbox modal styles */
+.chatbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.chatbox-content {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  /* height: 100%; */
+}
+
+.close-chatbox {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+.explore-chat-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.explore-section {
+  flex: 1;
+  transition: flex 0.5s;
+}
+
+.explore-section.slide-left {
+  flex: 0.5;
+}
+
+.chatbox-section {
+  flex: 1;
+}
+
+.post-images-container .post-image-item img {
+  cursor: pointer;
+}
+
+.chat-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.chat-modal .modal-content {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.chat-modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.chatbox {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.messages-container {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message.left {
+  align-self: flex-start;
+  background-color: #f1f0f0;
+}
+
+.message.right {
+  align-self: flex-end;
+  background-color: #d1f7c4;
+}
+
+.message.selected {
+  border: 2px solid #007bff;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: gray;
+  align-self: flex-end;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.input-container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.input-container button:disabled {
+  background-color: #ccc;
+}
+
+.reply-info {
+  font-size: 0.8em;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+
+/* Add this to your CSS file */
+
+/* Chatbox modal styles */
+.chatbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.chatbox-content {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.close-chatbox {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.explore-chat-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.explore-section {
+  flex: 1;
+  transition: flex 0.5s;
+}
+
+.explore-section.slide-left {
+  flex: 0.5;
+}
+
+.chatbox-section {
+  flex: 1;
+}
+
+/* Chat modal styles */
+.chat-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.chat-modal .modal-content {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.chat-modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.chatbox {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.messages-container {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message.left {
+  align-self: flex-start;
+  background-color: #f1f0f0;
+}
+
+.message.right {
+  align-self: flex-end;
+  background-color: #d1f7c4;
+}
+
+.message.selected {
+  border: 2px solid #007bff;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: gray;
+  align-self: flex-end;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.input-container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.input-container button:disabled {
+  background-color: #ccc;
+}
+
+.reply-info {
+  font-size: 0.8em;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+/* Your existing CSS */
+
+/* Add appropriate styling for .details and .price */
+.post-inputs.details {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.post-inputs.price::-webkit-outer-spin-button,
+.post-inputs.price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.post-bt{
+  background-color: #109041;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Adjust button hover effect */
+.post-bt:hover {
+  background-color: #0d7635;
+  transition: background-color 0.3s;
+}
+
+/* Chat icon styles */
+.chat-icon {
+  background-color: #fff;
+  color: #007bff;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.chat-icon:hover {
+  background-color: #fff;
+}
+
+.chat-icon i {
+  font-size: 20px;
+}
+
